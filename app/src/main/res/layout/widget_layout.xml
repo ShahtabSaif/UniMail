@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    android:padding="12dp">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/widget_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="★ PRIORITIZED GMAIL"
+            android:textColor="#FBBF24"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widget_sync_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Just now"
+            android:textColor="#94A3B8"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/widget_empty_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No high priority items pending.\nAll clear!"
+        android:textColor="#64748B"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- List of items (Static RemoteViews elements for total reliability) -->
+    <LinearLayout
+        android:id="@+id/widget_items_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Card 1 -->
+        <LinearLayout
+            android:id="@+id/widget_card_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_card_bg"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/widget_email_1_sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DevOps Team"
+                    android:textColor="#6366F1"
+                    android:textStyle="bold"
+                    android:textSize="11sp"
+                    android:maxLines="1" />
+                <TextView
+                    android:id="@+id/widget_email_1_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="10m ago"
+                    android:textColor="#64748B"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/widget_email_1_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Urgent data migration scheduling"
+                android:textColor="#E2E8F0"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/widget_email_1_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AWS postgres cluster migration schedule sign-off is required by tonight."
+                android:textColor="#94A3B8"
+                android:textSize="10sp"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <!-- Card 2 -->
+        <LinearLayout
+            android:id="@+id/widget_card_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_card_bg"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/widget_email_2_sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sarah (Design)"
+                    android:textColor="#10B981"
+                    android:textStyle="bold"
+                    android:textSize="11sp"
+                    android:maxLines="1" />
+                <TextView
+                    android:id="@+id/widget_email_2_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="1h ago"
+                    android:textColor="#64748B"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/widget_email_2_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Homepage redesign specs ready"
+                android:textColor="#E2E8F0"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/widget_email_2_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Finished homepage mockup design. Sync code and go over the plan."
+                android:textColor="#94A3B8"
+                android:textSize="10sp"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <!-- Card 3 -->
+        <LinearLayout
+            android:id="@+id/widget_card_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_card_bg"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/widget_email_3_sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Google Flights"
+                    android:textColor="#3B82F6"
+                    android:textStyle="bold"
+                    android:textSize="11sp"
+                    android:maxLines="1" />
+                <TextView
+                    android:id="@+id/widget_email_3_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="3h ago"
+                    android:textColor="#64748B"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/widget_email_3_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update notice: SQ-212 delay"
+                android:textColor="#E2E8F0"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/widget_email_3_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flight SQ-212 delayed tomorrow by 45 minutes. New schedule set."
+                android:textColor="#94A3B8"
+                android:textSize="10sp"
+                android:maxLines="2" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+{
+  "name": "UniMail",
+  "description": "Smart email prioritizer, widget dashboard, summarizer, and automated calendar-integrated reminders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
