@@ -19,6 +19,8 @@
 
 ## ✨ Features
 
+[![Download APK](https://img.shields.io/badge/Download-APK%20v1.0-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/ShahtabSaif/UniMail/releases/tag/v1.0)
+
 - 🔥 **Email Prioritization** — Automatically sorts your Gmail inbox by importance so you always see what matters first
 - 📝 **Email Summarization** — Get quick summaries of long emails without reading every word
 - 📅 **Schedule Management** — Manage your time and tasks directly linked to your emails
@@ -86,8 +88,8 @@
 - [x] Email summarization
 - [x] Schedule management
 - [ ] Notifications & reminders
-- [ ] Dark mode
-- [ ] Widget support
+- [x] Dark mode
+- [x] Widget support
 
 ---
 
